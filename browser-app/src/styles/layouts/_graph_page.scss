@@ -1,0 +1,120 @@
+#issuesTable {
+  text-align: center;
+
+  thead {
+    tr {
+      line-height: 1em;
+
+      th {
+        font-size: 0.8em;
+        padding: 3px 5px;
+        vertical-align: middle;
+        color: #999999;
+
+        &.colHeader {
+          color: #000000;
+          font-size: 1.2em;
+        }
+
+        &:last-child {
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+
+  tbody {
+    .issueType,
+    .summary {
+      border: none;
+    }
+
+    .issueType {
+      width: 20px;
+
+      .in_progress { color: $in_progress; }
+      .done { color: $done; }
+      .to_estimate { color: $to_estimate; }
+      .estimated { color: $estimated; }
+    }
+
+    .summary {
+      padding-right: 10px;
+      max-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      text-align: left;
+
+      a {
+        color: #326CA6;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    td {
+      &.grid {
+        cursor: pointer;
+
+        .spentTime {
+          font-size: 0.8em;
+        }
+
+        .fa-plus {
+          display: none;
+          font-size: 0.8em;
+          vertical-align: top;
+          text-align: left;
+        }
+
+        &:hover {
+          .fa-plus {
+            display: block;
+          }
+        }
+      }
+    }
+
+    tr.even {
+      background-color: #F5FAFF;
+    }
+  }
+
+  tfoot {
+    background-color: #E0F0FF;
+    font-weight: 500;
+    border: none;
+
+    tr {
+      td {
+        &.total {
+          padding-left: 10px;
+          border: none;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .nonBusinessDay {
+    background-color: #FFEEDD;
+  }
+
+  .toDay {
+    background-color: #E3FEEB;
+  }
+
+  td {
+    padding: 0 3px;
+    border-left: 1px solid #DDDDDD;
+  }
+
+  tr {
+    line-height: 2em;
+    border-bottom: 1px solid #EEEEEE;
+  }
+}

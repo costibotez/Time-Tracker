@@ -1,0 +1,81 @@
+input, textarea, select, label {
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-app-region: no-drag;
+
+  height: 100%;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background: #e4ecef;
+
+  #react-root {
+    height: 100%;
+
+    .window {
+      height: 100%;
+
+      .window-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 21px;
+      }
+
+      .window-container {
+        position: relative;
+        height: calc(100% - 23px);
+        top: 23px;
+
+        &.tray-window {
+          height: 100%;
+          top: 0;
+        }
+
+        #app-header {
+          height: 50px;
+        }
+
+        #app-content {
+          height: calc(100% - 51px);
+
+          #app-box-wrapper {
+            max-width: 90%;
+            margin: 20px auto;
+          }
+        }
+
+        .stories-container {
+          height: 100%;
+          display: flex;
+
+          #stories-sidebar {
+            flex: 1;
+            max-width: 215px;
+          }
+
+          #stories-wrapper {
+            flex: 1;
+            overflow: auto;
+            margin: 15px 0;
+
+            .stories-main {
+              overflow: auto;
+              padding: 0 15px 0 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

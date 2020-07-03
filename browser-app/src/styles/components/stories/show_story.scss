@@ -1,0 +1,32 @@
+#story {
+  .notif-icon {
+    font-size: 4em;
+    position: absolute;
+
+    &.in_progress { color: $in_progress; }
+    &.done { color: $done; }
+    &.to_estimate { color: $to_estimate; }
+    &.estimated { color: $estimated; }
+
+    &:before {
+      display: block;
+    }
+  }
+
+  .notif {
+    position: relative;
+    padding: 5px 50px 0 70px;
+
+    .notif-title {
+      margin: 0 0 10px 0;
+      font-size: 1.3em;
+      font-weight: 500;
+    }
+
+    .notif-controls {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

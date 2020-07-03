@@ -1,0 +1,120 @@
+.tray-window {
+  background-color: white;
+  font-size: 0.9em;
+
+  header, footer {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 5px;
+    min-height: 22px;
+    box-shadow: inset 0 1px 0 #f5f4f5;
+    background-color: #e8e6e8;
+    background-image: linear-gradient(to bottom,#e8e6e8 0,#d1cfd1 100%);
+
+    button {
+      cursor: pointer;
+      padding: 3px 7px 4px 7px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.06);
+      color: #333;
+      background-color: #fcfcfc;
+      background-image: linear-gradient(to bottom,#fcfcfc 0,#f1f1f1 100%);
+      border: 1px solid transparent;
+      border-color: #c2c0c2 #c2c0c2 #a19fa1;
+      border-radius: 4px;
+
+      &.pull-right {
+        float: right;
+      }
+
+      &:focus {
+        box-shadow: none
+      }
+
+      &:active {
+        background-color: #ddd;
+        background-image: none
+      }
+
+      &.btn-negative {
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        border-color: #fb2f29 #fb2f29 #fb1710;
+        background-color: #fd918d;
+        background-image: linear-gradient(to bottom,#fd918d 0,#fb2f29 100%);
+
+        &:active {
+          background-color: #fc605b;
+          background-image: linear-gradient(to bottom,#fc605b 0,#fb1710 100%);
+        }
+      }
+
+      &.resetButton {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  header {
+    top: 0;
+    border-bottom: 1px solid #c2c0c2;
+  }
+
+  footer {
+    bottom: 0;
+    border-top: 1px solid #c2c0c2;
+  }
+
+  .list-group-container {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 33px 0;
+
+    .no-story {
+      padding: 9px 5px 5px 10px;
+      color: #5C5C5C;
+    }
+
+    .list-group {
+      height: 100%;
+      overflow: auto;
+
+      .list-group-item {
+        display: flex;
+
+        padding: 9px 5px 5px 10px;
+        color: #5c5c5c;
+        border-bottom: 1px solid #EEE;
+
+        .fa-circle {
+          line-height: inherit;
+
+          &.in_progress { color: $in_progress; }
+          &.done { color: $done; }
+          &.to_estimate { color: $to_estimate; }
+          &.estimated { color: $estimated; }
+        }
+
+        .list-group-item-counter {
+          background: #F7F7F7;
+          border-radius: 3em;
+          color: #333333;
+          min-width: 13px;
+          padding: 0 3px;
+          text-align: center;
+          border: 1px solid #838383;
+          font-size: 0.8em;
+        }
+
+        .story-title {
+          flex: 1;
+          padding: 0 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
