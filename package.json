@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "license": "MIT",
   "description": "App is based on Electron, React, Redux + Rails as a back end.",
-  "author": "Dmytro Vasin <dmytro.vasin@gmail.com>",
+  "author": "CostinBotez",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DmytroVasin/TimeTracker.git"
+    "url": "https://github.com/costibotez/Time-Tracker.git"
   },
   "scripts": {
     "clean": "rm -rf app/electron-app/ && rm -rf app/browser-app/ && rm -rf dist/",
